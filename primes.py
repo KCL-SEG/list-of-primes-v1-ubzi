@@ -3,4 +3,16 @@
 
 def primes(number_of_primes):
     list = []
+    counter = 2
+    while len(list) < number_of_primes:
+        if PrimeCheck(counter) == True:
+            list.append(counter)
+        counter += 1
     return list
+
+
+def PrimeCheck(num):
+    for i in range (2,(num // 2) + 1 ):
+        if (num % i) == 0:
+            return False
+    return True
